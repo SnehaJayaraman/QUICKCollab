@@ -1,0 +1,70 @@
+﻿
+
+h4 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.heading {
+    color: black;
+    font-size: 1.875em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: center;
+}
+
+    table.center {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+th, td {
+    padding: 10px 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+th {
+    background-color: #58f4e6;
+    font-size: 20px;
+}
+
+
+
+td {
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    background-color: #cdcbcb;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+}
+
+    td:first-child {
+        border-left: 1px solid grey;
+    }
+
+.container {
+    text-align: center;
+}
+.container grey-text{
+    text-align:center;
+}
+
+form.SubmitBtn {
+    color:white;
+    background:blue;
+    border-style:outset;
+    height:50px;
+    width:100px;
+    color: blue !important;
+}
+
+
+
+

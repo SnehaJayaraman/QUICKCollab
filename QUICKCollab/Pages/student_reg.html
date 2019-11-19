@@ -1,0 +1,174 @@
+<html>
+<head>
+<title>Web-tech</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+        function validateForm() {
+          var x = document.forms["myForm"]["pswd1"].value;
+          var y=document.forms["myForm"]["pswd2"].value;
+          if (x!=y) {
+            alert("Password not matching");
+            return false;
+          }
+          var sem=document.forms["myForm"]["sem"].value;
+          if(isNaN(sem) || sem>8 || sem<1)
+          {
+              alert("Please enter a valid semester");
+              return false;
+          }
+          var phone=document.forms["myForm"]["phone"].value;
+          if(isNaN(phone) || phone.length<10 || phone.length>10)
+          {
+              alert("Please enter a valid phone No");
+              return false;
+          }
+          //var year=document.forms["myForm"]["year"].value;
+          //if(isNaN(year) || year.length>4 || year.length<4)
+          //{
+          //    alert("Please enter valid Year of join");
+          //    return false;
+
+        //}
+}
+       
+    
+</script>
+<style>
+    #form1{
+        margin-left: 400px;
+        margin-top: 70px;
+    }
+</style>
+
+</head>
+<body >
+    <h1 style="text-align: center">STUDENT FACULTY COLLABORATION PORTAL</h1>
+    <p style="text-align: center; font: size 30;"><b>STUDENT REGISTERATION</b></p>
+    <form name="myForm" id="form1"  onsubmit="return validateForm()" action="action.php" method="POST" >
+    <table>
+    <tr>
+        <td>
+         UserName*:
+        </td>
+        <td>
+        <input type="text" name="username" placeholder="Enter Username" required>
+        </td>
+    </tr>
+    <tr>
+            <td>
+                    Password*:
+            </td>
+            <td>
+                    <input type="password" name="pswd1" placeholder="Enter Password" required>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                    Enter password again*:
+            </td>
+            <td>
+                    <input type="password" name="pswd2" placeholder="Enter Password Again" required>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                    First Name*:
+            </td>
+            <td>
+                    <input  type="text" name="fname" placeholder="Enter First Name" required>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                    Last Name*:
+            </td>
+            <td>
+                    <input type="text" name="lname" placeholder="Enter Last Name" required>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                    SRN*:
+            </td>
+            <td>
+                    <input type="text" name="srn" placeholder="Enter SRN" required>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                    Mail ID:*
+            </td>
+            <td>
+                    <input type="email" name="mailID" placeholder="Enter Mail ID" required>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                    Phone No:*
+            </td>
+            <td>
+                    <input name="phone" placeholder="Enter Phone Number" required>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                    Semester:*
+            </td>
+            <td>
+        <!--<input name="sem" placeholder="Enter Semester" required>-->
+                    <select name="sem">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>   
+                      </select>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                    Year Of Joining:
+            </td>
+            <td>
+                    <!--<input  name="year" placeholder="Enter Year Of Join">-->
+                    <select name="year">
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                      </select>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                    Area of Interest*:
+            </td>
+            <td>
+                    <textarea rows=4 cols=50 name="aoi" placeholder="Enter comma separated interests..." required></textarea>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                    Areas Of Expertise*:
+            </td>
+            <td>
+                    <textarea rows=4 cols=50 name="aoe" placeholder="Enter comma separated interests.." required></textarea>
+    
+            </td>
+    </tr>   
+    </table>
+      <br><input type="submit" name="submit" style="margin-left: 200px" value="Submit"/>    
+    </form>
+    
+</body>
+</html>
